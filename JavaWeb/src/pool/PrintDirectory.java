@@ -8,6 +8,7 @@ import java.io.File;
  */
 public class PrintDirectory {
     public static void printDirectory(File file) {
+        System.out.println("------------file---------------"+file.getName());
         File[] childFiles = file.listFiles();
         for (File childFile : childFiles) {
             if (childFile.isDirectory()) {
