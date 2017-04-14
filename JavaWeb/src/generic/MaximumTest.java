@@ -3,7 +3,7 @@ package generic;
 /**
  * Created by admin on 2017/4/13.
  */
-public class MaximumTest {
+public class MaximumTest{
 
     //比较 三个值并返回最大值
     public static <T extends Comparable<T>> T maximun(T x,T y,T z){
