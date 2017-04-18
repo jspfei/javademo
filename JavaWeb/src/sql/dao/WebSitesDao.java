@@ -101,5 +101,17 @@ public class WebSitesDao {
     }
     /*
     **/
+    public void deleteWebSites(Integer id) throws SQLException
+    {
+        Connection conn = DBUtil.getConn();
+
+        String sql = "delete from websites where id=?";
+
+        PreparedStatement ptmt = conn.prepareStatement(sql);
+
+        ptmt.setInt(1, id);
+
+        ptmt.execute();
+    }
 
 }
