@@ -15,4 +15,21 @@ public class WebSitesAction {
         WebSitesDao webSitesDao = new WebSitesDao();
         return webSitesDao.query();
     }
+
+    public WebSites queryById(int i)throws Exception{
+        WebSitesDao webSitesDao = new WebSitesDao();
+        return webSitesDao.queryById(i);
+    }
+    public void add(WebSites webSites)throws Exception{
+        WebSitesDao webSitesDao = new WebSitesDao();
+        webSitesDao.addWebSites(webSites);
+    }
+    public void update(WebSites webSites) throws Exception{
+        WebSitesDao webSitesDao = new WebSitesDao();
+        webSitesDao.updateWebSites(webSites);
+    }
+    public void deleteById(int i) throws Exception{
+        WebSitesDao webSitesDao = new WebSitesDao();
+        webSitesDao.deleteWebSites(i);
+    }
 }

@@ -72,9 +72,10 @@ public class WebSitesDao {
     public void addWebSites(WebSites webSites) throws SQLException{
         Connection conn = DBUtil.getConn();
 
-        String sql ="insert into websites(name,url,alexa,country values(?,?,?,?)";
+        String sql ="insert into websites(name,url,alexa,country) values(?,?,?,?)";
 
         PreparedStatement ptmt = conn.prepareStatement(sql);
+
         ptmt.setString(1,webSites.getName());
         ptmt.setString(2,webSites.getUrl());
         ptmt.setInt(3,webSites.getAlexa());
